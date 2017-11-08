@@ -29,7 +29,7 @@ public class UserController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public Object saveUserInfo(@RequestParam("name") String name, @RequestParam("age") String age, ModelMap modelMap) {
-        System.out.println("我是web");
+        System.out.println("我是interface");
         System.out.println("name = " + name);
         System.out.println("age = " + age);
         User user = userService.saveUser(name, age);

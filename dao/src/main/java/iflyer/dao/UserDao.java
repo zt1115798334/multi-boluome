@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserDao {
     @Autowired
-    MongoTemplate mongoTemplate;
+    private MongoTemplate mongoTemplate;
 
     public User getUser(String name) {
         User user = mongoTemplate.findOne(new Query(Criteria.where("name").is(name)), User.class);
@@ -26,8 +26,8 @@ public class UserDao {
         return user;
     }
 
-    public User saveUser(String name,String age){
-        mongoTemplate.save(new User(name,age));
+    public User saveUser(String name, String age) {
+        mongoTemplate.save(new User(name, age));
         return mongoTemplate.findOne(new Query(Criteria.where("name").is(name)), User.class);
     }
 }

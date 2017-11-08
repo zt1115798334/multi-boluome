@@ -11,6 +11,7 @@
 
     <modules>
         <module>web</module>
+        <module>interface</module>
         <module>service</module>
         <module>dao</module>
         <module>domain</module>
@@ -104,6 +105,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
